@@ -1,11 +1,7 @@
 import streamlit as st
 from PIL import Image
 import pandas as pd
-#import matplotlib as mpl
-#import matplotlib.pyplot as plt
-import numpy as np
 
-import seaborn as sns
 
 st.title("Kanmani Thamizhanban")
 st.subheader("Data Engineer")
