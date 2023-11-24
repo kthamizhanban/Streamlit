@@ -1,9 +1,10 @@
 import streamlit as st
 from PIL import Image
 import pandas as pd
-import matplotlib as mpl
-import matplotlib.pyplot as plt
+#import matplotlib as mpl
+#import matplotlib.pyplot as plt
 import numpy as np
+
 import seaborn as sns
 
 st.title("Kanmani Thamizhanban")
@@ -31,14 +32,3 @@ experience_table=pd.DataFrame ({
 })
 experience_table=experience_table.set_index('Job Title')
 st.table(experience_table)
-
-st.subheader("Projects")
-df=pd.read_csv('titanic.csv')
-
-subjects=['English','Math','Science','Law','Chemistry']
-scores=[55,97,67,86,94]
-st.bar(subjects,scores,color='red',edgecolor='black')
-#plt.xlabel('Subject',fontsize=12)
-#plt.ylabel('Scores')
-#plt.title('Student Scores')
-st.show()
