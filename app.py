@@ -35,7 +35,7 @@ with tab_exp:
     experience_table = pd.DataFrame({
             "Job Title":["Data Engineering Senior Analyst","Application Development Specialist","Data Engineering Associate"],
             "Company":["Accenture","IQVIA","Accenture"],
-            "Job Description":["Providing expertise in data storage structures, data mining, and data cleansing","Collaborated with cross-functional teams to identify areas for process improvement and recommended data-driven solutions, reducing operational costs by 30%.","Meticulously processed 150 job postings/day on the University’s job portal (Navigator)"],
+            "Job Description":["Successfully spearheaded a project to migrate ETL pipelines, achieving a 100% reduction in processing time; enhanced Informatica Intelligent Cloud Services, resulting in a 60% improvement in data processing speed; led a user story design, saving 4 labor hours daily and increasing project efficiency by 25%; automated Power BI reports, reducing manual efforts by 95%; and provided technical mentorship to junior team members for improved autonomy and leadership.","Collaborated with cross-functional teams to identify areas for process improvement and recommended data-driven solutions, reducing operational costs by 30%.","Meticulously processed 150 job postings/day on the University’s job portal (Navigator)"],
     })
     #experience_table = experience_table.set_index('Job Title')
     st.table(experience_table)
