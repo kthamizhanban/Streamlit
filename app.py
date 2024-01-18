@@ -12,7 +12,7 @@ col1, col2= st.columns([2,1])
 with col1:
     st.subheader("")
     st.subheader("About Me")
-    st.text("Passionate about the power of data to drive insights and\ninnovation, I am poised to apply my advanced data engineering\nskills and extensive industry acumen to address concrete \nchallenges and derive actionable insights for\nstrategic decision-making.")
+    st.text("Passionate about the power of data to drive insights\nand innovation, I am poised to apply my advanced data\nengineeringskills and extensive industry acumen to address concrete \nchallenges and derive actionable insights for\nstrategic decision-making.")
 with col2:
     st.subheader("")
     st.subheader("")
