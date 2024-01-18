@@ -41,7 +41,7 @@ with tab_exp:
     st.table(experience_table)
 with tab_pro:
     #Projects GRID
-    st.subheader("Academic Project- Analysis of Titanic Survivor Dataset")
+    st.subheader("Academic Project- Analysis of Titanic Survivors Dataset")
     titanic_data = pd.read_csv('titanic.csv')
     interval = alt.selection_interval()
     scatter = alt.Chart(titanic_data).mark_point().encode(
