@@ -6,23 +6,26 @@ import altair as alt
 
 #st.snow()
 st.title("Kanmani Thamizhanban")
-#:color[your text]
-#st.markdown(":purple[Marvi Naaz]")
-st.subheader("One day there won't be any FEMALE LEADERS, just leaders")
-col1, col2= st.columns([3,1])
+#color[your text]
+st.subheader("Transforming big data into bigger opportunities!")
+col1, col2= st.columns([2,1])
 with col1:
+    st.subheader("")
     st.subheader("About Me")
-    st.text("Passionate about the power of data to drive insights and\ninnovation, I bring a wealth of experience in \nProject Management and Change Management to the world \nof Data Science.")
+    st.text("Passionate about the power of data to drive insights and\ninnovation, I am poised to apply my advanced data engineering\nskills and extensive industry acumen to address concrete \nchallenges and derive actionable insights for\nstrategic decision-making.")
 with col2:
-    image = Image.open('Kanmani.jpeg')
-    st.image(image,width = 250)
+    st.subheader("")
+    st.subheader("")
+    st.subheader("")
+    image = Image.open('DE_image.jpeg')
+    st.image(image,width = 200)
 
 
 st.sidebar.caption('Wish to connect?')
 st.sidebar.write('📧: raymondcy95@gmail.com')
 #rb means converting pdf file to raw binary format
-pdf_file = open('Resume.pdf', 'rb')
-st.sidebar.download_button('Download Resume',pdf_file,file_name='Resume.pdf',mime='pdf')
+pdf_file = open('Kanmani Thamizhanban Resume 2024.pdf', 'rb')
+st.sidebar.download_button('Download Resume',pdf_file,file_name='Kanmani Thamizhanban Resume 2024.pdf',mime='pdf')
 
 tab_skills,tab_exp,tab_pro,tab_cont,tab_pic = st.tabs(['Skills','Experience','Projects','Contact Me',"Take a picture"])
 
@@ -30,15 +33,15 @@ with tab_exp:
     #Experience
     st.subheader("Relevant Experience")
     experience_table = pd.DataFrame({
-            "Job Title":["Data Analyst","Project Specialist","Employer Relations Assistant"],
-            "Company":["Sunlife","Sunlife","Laurier"],
+            "Job Title":["Data Engineering Senior Analyst","Application Development Specialist","Data Engineering Associate"],
+            "Company":["Accenture","IQVIA","Accenture"],
             "Job Description":["Providing expertise in data storage structures, data mining, and data cleansing","Collaborated with cross-functional teams to identify areas for process improvement and recommended data-driven solutions, reducing operational costs by 30%.","Meticulously processed 150 job postings/day on the University’s job portal (Navigator)"],
     })
-    experience_table = experience_table.set_index('Job Title')
+    #experience_table = experience_table.set_index('Job Title')
     st.table(experience_table)
 with tab_pro:
     #Projects GRID
-    st.subheader("Projects")
+    st.subheader("Academic Project- Analysis of Titanic Survivor Dataset")
     titanic_data = pd.read_csv('titanic.csv')
     interval = alt.selection_interval()
     scatter = alt.Chart(titanic_data).mark_point().encode(
@@ -61,20 +64,22 @@ with tab_pro:
             interval
         )
     st.altair_chart(scatter | bar)
+    st.subheader("Summary")
+    st.write("The First part includes scatter plots and a heatmap for the relationship between fare, gender, and age. The second part includes a contingency table and a bar chart representing the relationship between passenger class and survival. By combining these analyses, we can gain a more comprehensive understanding of how different factors relate to survival and the relationships between fare, gender, and age in the Titanic dataset.")
 
 with tab_skills:
     #Skills Section - In the form of a bar chart
     skill_data = pd.DataFrame(
         {
-            "Skills Level":[90,60,60,40],
-            "Skills":["Python","Tableau","mySQL","Rstudio"]
+            "Skills Level":[70,90,80,90,90,70],
+            "Skills":["Python","SQL","Scripting","Data_Modeling","Data_Profiling","Analytical"]
         })
     skill_data = skill_data.set_index('Skills')
     with st.container():
         st.subheader("Skills")
         st.bar_chart(skill_data)
     with st.expander("See More Skills"):
-        st.write("I have lots of more skills too such as ............")
+        st.write("● Data storage: Oracle, PostgreSQL, MySQL, SAP HANA, Microsoft SQL server\n ● Data Integration and ETL Tools: Informatica PowerCenter, Nexxus ETL, lnformatica Intelligent Cloud Services (IICS)\n ● Orchestration Tools: Git, AWS S3, MuleSoft Anypoint\n ● Programming Languages/softwares: Python, Jupyter Notebook\n ● Query Language: SQL\n ● Bl Tools: Microsoft Power Bl, Advanced Excel, Tableau- Basic\n ● Project Management Tools: Jira, SNOW\n ● Miscellaneous: Web scraping, Postman API, Splunk monitoring\n ● Unix/Powershell scripting\n ● Salesforce-Veeva CRM\n ● Performance improvement/tuning")
 
 with tab_cont:
     # Streamlit form
